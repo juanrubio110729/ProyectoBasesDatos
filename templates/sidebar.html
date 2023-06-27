@@ -1,0 +1,131 @@
+{% load static %}
+<aside class="main-sidebar sidebar-light-primary elevation-4">
+    <a href="" class="brand-link">
+        <img src="{% static 'img/layoutlogo.png' %}"
+             alt="UNIVALLE" width="150" style="margin-top: 5px;">
+        <span class="brand-text font-weight-light">
+            <img src="{% static 'img/layoutletras.png' %}" width="180" style="margin-left: -155px;">
+        </span>
+    </a>
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{% static 'img/user.jpg' %}" class="img-circle" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{ request.user.username }}</a>
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="{% url 'app:dashboard' %}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-house"></i>
+                        <p>
+                           Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:area_conocimiento_list' %}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-swatchbook"></i>
+                        <p>
+                           Áreas de conocimiento
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:autores_list' %}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-chalkboard-user"></i>
+                        <p>
+                            Autores
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:editorial_list' %}" class="nav-link">
+                        <i class="nav-icon fa-regular fa-newspaper"></i>
+                        <p>
+                            Editoriales
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa-solid fa-book-bookmark"></i>
+                        <p>
+                            Libros
+                            <i class="nav-icon right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{% url 'app:libro_list' %}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-book"></i>
+                                <p>
+                                    Libros
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'app:ejemplar_list' %}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-book-open-reader"></i>
+                                <p>
+                                    Ejemplares
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'app:librodigital_list' %}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-globe"></i>
+                                <p>
+                                    Libros Digitales
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'app:descarga_list' %}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-download"></i>
+                                <p>
+                                    Descargas
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:prestamo_list'%}" class="nav-link">
+                        <i class="nav-icon fas fa-person-chalkboard"></i>
+                        <p>
+                            Prestamos
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:multa_list' %}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-file-circle-exclamation"></i>
+                        <p>
+                            Multas
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'app:solicitud_list' %}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-book-bookmark"></i>
+                        <p>
+                            Solicitud libro nuevo
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'user:user_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Usuarios
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

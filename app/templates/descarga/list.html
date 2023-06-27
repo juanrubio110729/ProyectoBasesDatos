@@ -1,0 +1,29 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+<script src="{% static 'js/descarga/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 10%;">Nro.</th>
+        <th scope="col" style="width: 20%;">ID Usuario</th>
+        <th scope="col" style="width: 25%;">Libro</th>
+        <th scope="col" style="width: 25%;">Fecha descarga</th>
+        <th scope="col" style="width: 20%;">Direccion IP</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+{% endblock %}
+
+{% block buttons_list %}
+    <a href="{{ list_url }}" class="btn btn-success">
+        <i class="fa-solid fa-rotate"></i> Actualizar
+    </a>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+

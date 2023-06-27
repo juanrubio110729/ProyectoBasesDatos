@@ -1,0 +1,23 @@
+{% extends 'list.html' %}
+{% load static %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">Nro</th>
+        <th scope="col" style="width: 20%;">Nombres</th>
+        <th scope="col" style="width: 10%;">Username</th>
+        <th scope="col" style="width: 10%;">Cedula</th>
+        <th scope="col" style="width: 15%;">Telefono</th>
+        <th scope="col" style="width: 20%;">Fecha de registro</th>
+        <th scope="col" style="width: 15%;">Grupos</th>
+        <th scope="col" style="width: 5%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/user/list.js' %}"></script>
+{% endblock %}
